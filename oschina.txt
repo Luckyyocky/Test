@@ -1,0 +1,37 @@
+//你需要执行下面两条命令,作为git的基础配置,作用是告诉git你是谁,你输入的信息将出现在你创建的提交中.
+git config --global user.name "Yocky"
+git config --global user.email "yg846764914@163.com"
+
+//然后在你的需要初始化版本库的文件夹中执行
+git init 
+git remote add origin <https://git.oschina.net/yocky/Blog.git>
+
+
+//如果你想克隆一个项目,只需要执行
+git clone https://git.oschina.net/yocky/Blog.git
+
+
+//完成第一次提交
+git pull Blog master
+git touch init.txt //如果已经存在更改的文件,则这一步不是必须的
+git add .
+git commit -m "第一次提交"
+git push Blog master
+
+git pull Blog master
+git touch init.txt 
+git add .提交的第N次"
+git push Blog master
+
+//在码云平台仓库上已经存在readme文件，故在提交时可能会存在冲突，这时您需要选择的是保留线上的文件或者舍弃线上的文件，如果您舍弃线上的文件，则在推送时选择强制推送，强制推送需要执行下面的命令
+git push Blog master -f
+//如果您选择保留线上的readme文件,则需要先执行
+git pull Blog master
+
+
+// 打开git客户端，生成公钥，生成命令如下(注意大小写)
+ssh-keygen.exe-C"yg846764914@163.com" -t rsa
+Gener ating public/private rsa key pair.
+Enter file in which to save the key ()
+
+https://git.oschina.net/yocky/Blog.git
